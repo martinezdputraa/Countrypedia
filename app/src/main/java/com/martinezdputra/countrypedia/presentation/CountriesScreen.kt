@@ -2,6 +2,7 @@ package com.martinezdputra.countrypedia.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -119,15 +120,20 @@ fun CountryDialog(
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center,
             ) {
                 Text(
                     text = country.emoji,
                     fontSize = 30.sp,
                 )
-                Spacer(modifier = Modifier.width(16.dp))
                 Text(
+                    modifier = Modifier.padding(horizontal = 16.dp),
                     text = country.name,
                     fontSize = 24.sp,
+                )
+                Text(
+                    text = country.emoji,
+                    fontSize = 30.sp,
                 )
             }
             Spacer(modifier = Modifier.height(16.dp))
